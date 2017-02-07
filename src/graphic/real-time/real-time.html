@@ -1,0 +1,18 @@
+<div class="row">
+    <button ng-click="$ctrl.run=!$ctrl.run">Start / Stop</button>
+
+    <div>
+        <p>duration: 500</p>
+        <nvd3 class="nv1" options="$ctrl.options" data="$ctrl.data"></nvd3>
+    </div>
+
+    <div>
+        <p>duration: 0</p>
+        <nvd3 class="nv2" options="$ctrl.options1" data="$ctrl.data"></nvd3>
+    </div>
+
+</div>
+
+<div>
+    {{ $ctrl.data | json }}
+</div>

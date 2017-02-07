@@ -1,0 +1,30 @@
+@bg: rgba(238, 238, 238, 0.26);
+@green: #A2BF63;
+@white: #FFF;
+@kyani-blue: #002857;
+@blue: #4d89bd;
+@clear-gray: #BFBFBF;
+@clearest-gray: #eee;
+@gray: #999999;
+@gray-dark: #666666;
+@transparent: rgba(85, 85, 85, 0);
+@dark-gray: #A0A0A0;
+@black-kyani: #656565;
+@green-kyani: #A2BF63;
+@gray-search: #D6D6D6;
+@gray-input: #F2F2F2;
+@blue-msg: #4D89BD;
+@red-msg: #FF0000;
+@yellow-msg: #F2C300;
+
+@blue-cards: #002857;
+
+/**
+Shadow mixin
+use it in your class as .shadows(your params) or use it as .shadows() to use default values
+ */
+.shadows(@x:-1px, @y:2px, @blur: 28px, @spread:-6px , @color: rgba(0, 0, 0, 0.75)) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}

@@ -1,0 +1,12 @@
+node_modules
+coverage
+dist
+build
+typings
+.idea
+.vscode
+.DS_Store
+src/**/*.js
+!src/**/*spec.js
+src/**/*.js.map
+*.log**
