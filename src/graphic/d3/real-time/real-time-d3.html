@@ -1,0 +1,16 @@
+<div class="d3-graph">
+    <div class="row">
+        <div class="col-xs-3">
+            <label for="dataCharge">Initial Data</label>
+            <input type="text" id="dataCharge" ng-model="$ctrl.limitData">
+        </div>
+        <div class="col-xs-4">
+            <label for="intervalTime">Interval Time</label>
+            <input type="text" id="intervalTime" ng-model="$ctrl.intervalTime">
+        </div>
+        <div class="col-xs-3">
+            <button class="btn btn-info" ng-click="$ctrl.reDraw()">Draw</button>
+        </div>
+    </div>
+    <div class="graph"></div>
+</div>

@@ -5,12 +5,17 @@ import 'angular-translate';
 import 'd3';
 import 'nvd3/build/nv.d3';
 import 'angular-nvd3/dist/angular-nvd3';
+import 'highcharts';
+import 'lodash/lodash.js';
+import 'javascript-detect-element-resize/detect-element-resize.js';
+import 'angular-gridster2/dist/gridster.js';
 
 // Load boostrap styles
 import 'bootstrap/dist/css/bootstrap.css';
 import 'angular-ui-bootstrap';
 import 'angular-messages';
 import 'nvd3/build/nv.d3.css';
+import 'angular-gridster2/dist/gridster.css';
 
 // Config
 import AppRoutes from './app.routes';
@@ -44,7 +49,8 @@ const libList: Array<string> = [
     'pascalprecht.translate',
     'ui.bootstrap',
     'ngMessages',
-    'nvd3'
+    'nvd3',
+    'angular-gridster2'
 ];
 const apiList: Array<string> = [
 

@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">X: {{$ctrl.resolve.x}} Y: {{$ctrl.resolve.y}}</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <div class="row">
+            <div class="col-xs-6">
+                <button class="btn btn-primary" type="button" ng-click="$ctrl.typeAdd('comments')">Agregar Comentarios</button>
+            </div>
+            <div class="col-xs-6">
+                <button class="btn btn-primary" type="button" ng-click="$ctrl.typeAdd('lithology')">Agregar Litologias</button>
+            </div>
+        </div>
+        <div class="row" ng-if="$ctrl.typeAddShow=== 'comments'">
+            Comments
+            <div>
+                <input type="text" name="text-comment" value="" ng-model="$ctrl.comment" autofocus>
+            </div>
+        </div>
+        <div class="row" ng-if="$ctrl.typeAddShow=== 'lithology'">
+            <div class="col-xs-6">
+                <label for="from">From </label>
+                <input type="text" ng-model="$ctrl.from" id="from">
+            </div>
+            <div class="col-xs-6">
+                <label for="to">To </label>
+                <input type="text" ng-model="$ctrl.to" id="to">
+            </div>
+            <div class="col-xs-12">
+                <select ng-model="$ctrl.multipleSelect">
+                    <option value="1">Lito1</option>
+                    <option value="2">Lito2</option>
+                </select>
+            </div>
+            <div class="col-xs-12">
+                <input type="text" ng-model="$ctrl.percent">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.cancel()">OK</button>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="row">
+        <div class="col-xs-3">
+            <label for="dataCharge">Initial Data</label>
+            <input type="text" id="dataCharge" ng-model="$ctrl.dataInitial">
+        </div>
+        <div class="col-xs-4">
+            <label for="intervalTime">Interval Time</label>
+            <input type="text" id="intervalTime" ng-model="$ctrl.intervalTime">
+        </div>
+        <div class="col-xs-3">
+            <button class="btn btn-info" ng-click="$ctrl.reDraw()">Draw</button>
+        </div>
+    </div>
+    <div class="row">
+        Real Time High Chart
+        <div id="containerHours" style="min-width: 310px; height: 700px; margin: 0 auto"></div>
+    </div>
+</div>
