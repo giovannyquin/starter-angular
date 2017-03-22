@@ -7,6 +7,7 @@ import GaugesComponent from './highcharts/gauges/gauges.component';
 import MessageCommentComponent from './highcharts/message-comment/message-comment.component';
 import RealTimeD3Component from './d3/real-time/real-time-d3.component';
 import RealTimeBigDataComponent from './highcharts/real-time-big-data/real-time-big-data.component';
+import RealTimeBigDataChartComponent from './highcharts/real-time-big-data/real-time-big-data-chart.component';
 import { MessageDirective } from './highcharts/directives/message.directive';
 
 class Config {
@@ -42,6 +43,11 @@ class Config {
             template: '<real-time-big-data></real-time-big-data>'
         };
 
+        let realTimeBigDataChartConf = {
+            url: '/real-time-big-data-chart',
+            template: '<real-time-big-data-chart></real-time-big-data-chart>'
+        };
+
         let messageCommentConf = {
             url: '/message-comment',
             template: '<message-comment></message-comment>'
@@ -58,6 +64,7 @@ class Config {
         $stateProvider.state('/real-time-hours-high', realTimeHoursConf);
         $stateProvider.state('/real-time-d3', realTimeD3Conf);
         $stateProvider.state('/real-time-big-data', realTimeBigDataConf);
+        $stateProvider.state('/real-time-big-data-chart', realTimeBigDataChartConf);
         $stateProvider.state('/message', messageCommentConf);
         $stateProvider.state('/gauges-high', gaugesHighConf);
     }
@@ -72,5 +79,6 @@ export default ngMogule('app.graphic', [])
     .component('gaugesHigh', GaugesComponent)
     .component('realTimeD3', RealTimeD3Component)
     .component('realTimeBigData', RealTimeBigDataComponent)
+    .component('realTimeBigDataChart', RealTimeBigDataChartComponent)
     .directive('message', MessageDirective.factory())
     .config(Config).name;

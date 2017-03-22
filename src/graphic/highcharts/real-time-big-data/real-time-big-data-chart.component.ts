@@ -1,4 +1,5 @@
 let Highcharts = require('highcharts');
+import 'highcharts/modules/boost';
 class RealTimeBigDataController implements ng.IController {
     chart: any;
     intervalTime: number;
@@ -17,7 +18,7 @@ class RealTimeBigDataController implements ng.IController {
     }
 
     reDraw () {
-        //this.chart.destroy();
+        this.chart.destroy();
         this.init(this);
         /*this.chart.series[0].setData(this.chargeData(), true);
          this.chart.series[1].setData(this.chargeData(), true);
@@ -90,8 +91,13 @@ class RealTimeBigDataController implements ng.IController {
                         }, parent.intervalTime);
                     }
                 },
-                zoomType: 'x',
+                zoomType: 'xy',
                 inverted: true
+            },
+
+            boost: {
+                useGPUTranslations: true,
+                usePreAllocated: true
             },
 
             navigator: {
