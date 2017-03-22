@@ -13,7 +13,6 @@ import 'angular-gridster2/dist/gridster.js';
 // Load boostrap styles
 import 'bootstrap/dist/css/bootstrap.css';
 import 'angular-ui-bootstrap';
-import 'angular-messages';
 import 'nvd3/build/nv.d3.css';
 import 'angular-gridster2/dist/gridster.css';
 
@@ -48,7 +47,6 @@ const libList: Array<string> = [
     'ui.router',
     'pascalprecht.translate',
     'ui.bootstrap',
-    'ngMessages',
     'nvd3',
     'angular-gridster2'
 ];
